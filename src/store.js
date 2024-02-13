@@ -152,7 +152,6 @@ const store = createStore({
       context.commit('addDisplayedBook', newBooksWithDetails)
     },
     async applyFilter(context, filterObj) {
-      // set filter tag
       context.commit('setBooksSortFilterFlag')
 
       // books filtering, only currently displayed books are filtered
@@ -178,10 +177,8 @@ const store = createStore({
         })
       }
 
-      // fetchBooksWithDetails
       let filteredBooksWithDetails = await context.dispatch('fetchBooksWithDetails', filteredBooks)
 
-      // setDisplayedBooks
       context.dispatch('setDisplayedBooks', filteredBooksWithDetails)
     }
   }
