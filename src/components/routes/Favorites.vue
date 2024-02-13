@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import BookCard from './BookCard.vue'
+import BookCard from '../ui-parts/BookCard.vue'
 export default {
   name: 'Favorites',
   components: {

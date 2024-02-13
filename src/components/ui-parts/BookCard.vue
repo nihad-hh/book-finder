@@ -3,11 +3,7 @@
     class="flex flex-col items-center self-start border border-gray-900 rounded-lg hover:bg-gray-800 hover:border hover:border-gray-700"
   >
     <div class="relative">
-      <img
-        class="w-40 h-56 p-4 rounded-t-lg lg:w-56 lg:h-80"
-        :src="currBook.image"
-        alt="Book image"
-      />
+      <img class="p-4 rounded-t-lg w-56 h-80" :src="currBook.image" alt="Book image" />
     </div>
     <div class="flex flex-col flex-wrap content-between justify-center px-4 pb-2 align-middle">
       <h5
@@ -22,10 +18,10 @@
       </h3>
       <div class="flex items-center justify-between">
         <RouterLink :to="{ name: 'details', params: { bookId: currBook.id } }">
-          <Button class="mx-0 text-[10px]" text="Details" />
+          <Button class="mx-0 text-[12px]" text="Details" />
         </RouterLink>
         <Button
-          class="text-[10px]"
+          class="text-[12px]"
           :text="isBookFav(currBook) ? 'Remove from Favorites' : 'Add to favorites'"
           @click="
             isBookFav(currBook) ? removeBookFromFavorites(currBook) : addBookToFavorites(currBook)
@@ -37,7 +33,7 @@
 </template>
 
 <script>
-import Button from './Button.vue'
+import Button from '../reusables/Button.vue'
 export default {
   name: 'BookCard',
   components: { Button },

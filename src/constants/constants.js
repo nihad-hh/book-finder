@@ -4,11 +4,11 @@ const filterNames = [
   'Authors A-Z',
   'Authors Z-A',
   'Subtitle A-Z',
-  'Subtitle Z-A',
-  'Pages asc',
-  'Pages desc',
-  'Year asc',
-  'Year desc'
+  'Subtitle Z-A'
+  // 'Pages asc',
+  // 'Pages desc',
+  // 'Year asc',
+  // 'Year desc'
 ]
 export default {
   filterNames: filterNames

@@ -1,31 +1,20 @@
 <template>
-  <!-- <div>
-    <img class="h-32 w-32" :src="book.image" alt="Book image" />
-    <h1>{{ book.title }}</h1>
-    <h2>{{ book.authors }}</h2>
-  </div> -->
   <section className="overflow-hidden text-gray-100">
     <div className="container px-5 pt-32 pb-4 mx-auto sm:py-24">
-      <div className="flex flex-wrap items-center mx-auto lg:max-w-5xl">
+      <div className="flex flex-wrap items-center mx-auto max-w-5xl">
         <img
           alt="Book image"
-          className="object-cover object-center w-full rounded h-1/2 lg:w-1/4"
+          className="object-cover object-center rounded h-1/2 w-1/4"
           :src="book.image"
         />
 
-        <div className="w-full mt-6 lg:w-2/3 lg:pl-10 lg:py-6 lg:mt-0">
+        <div className="mt-6 w-2/3 pl-10 py-6 lg:mt-0">
           <h2 className="relative text-sm tracking-widest text-gray-500 title-font">
             {{ book.authors }}
-            <div className="absolute right-0 sm:bottom-4 sm:relative bottom-24">
-              <WishlistButton product="{product}" />
-            </div>
           </h2>
           <h1 className="mb-1 text-3xl font-medium text-gray-100 title-font">{{ book.title }}</h1>
           <h2 className="relative text-sm tracking-widest text-gray-500 title-font">
             {{ book.subtitle }}
-            <div className="absolute right-0 sm:bottom-4 sm:relative bottom-24">
-              <WishlistButton product="{product}" />
-            </div>
           </h2>
           <div className="flex mb-4">
             <span className="flex items-center">
